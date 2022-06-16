@@ -5,11 +5,9 @@ import pickle
 
 
 
-
-
 class naive_bayes:
     def __init__(self, model_file, scaler_file):
-        with open('naive_bayes_model', 'rb') as model_file, open('scaler', 'rb') as scaler_file:
+        with open('random_forest_model', 'rb') as model_file, open('scaler', 'rb') as scaler_file:
             self.classifier = pickle.load(model_file)
             self.scaler = pickle.load(scaler_file)
             self.data = None
